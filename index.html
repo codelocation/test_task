@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>test_task</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="block_1">
+                <div class="video">
+                    <div class="info">
+                        <h1>LevelUp</h1>
+                        <div class="image_article">
+                            <div class="image"></div>
+                            <ul>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                            </ul>
+                        </div>
+                        <button type="button"><a href="#button">Заказать</a></button>
+                    </div>
+                    <video autoplay loop muted>
+                        <source src="Clouds - 1154.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            
+            <div class="block_2">
+                <div class="article_block2">
+                    <div class="wrapper_block2">
+                        <div class="circle-image"><img src="prod.png"></div>
+                        <p>Lorem ipsum</p>
+                    </div>
+                    <div class="wrapper_block2">
+                        <div class="circle-image"><img src="prod.png"></div>
+                        <p>Lorem ipsum</p>
+                    </div>
+                    <div class="wrapper_block2">
+                        <div class="circle-image"><img src="prod.png"></div>
+                        <p>Lorem ipsum</p>
+                    </div>
+                </div>
+                <div class="image-button">
+                    <img src="prod.png">
+                    <button type="button"><a href="#button">Заказать</a></button>
+                </div>
+                <div class="article_block2">
+                    <div class="wrapper_block2">
+                        <div class="circle-image"><img src="prod.png"></div>
+                        <p>Lorem ipsum</p>
+                    </div>
+                    <div class="wrapper_block2">
+                        <div class="circle-image"><img src="prod.png"></div>
+                        <p>Lorem ipsum</p>
+                    </div>
+                    <div class="wrapper_block2">
+                        <div class="circle-image"><img src="prod.png"></div>
+                        <p>Lorem ipsum</p>
+                    </div>
+                </div> 
+            </div>
+
+            <div class="block_3">
+                <div class="wrapper_block3"> <div>
+                <div class="slides fade">
+                    <img src="doctor.png">
+                    <div class="name">Lorem Ipsum</div>                 
+                    <div class="text">Elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                    nostrud exercitation
+                </div>
+                </div>
+                <div class="slides fade">
+                    <img src="doctor.png">
+                    <div class="name">Dolor Sit</div>
+                    <div class="text">Ullamco laboris nisi ut aliquip ex ea 
+                        commodo consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse </div>
+                </div>
+                <div class="slides fade">
+                    <img src="doctor.png">
+                    <div class="name">Consectetur Adipiscing</div>
+                    <div class="text">Cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt 
+                        in culpa qui officia deserunt mollit</div>
+                </div>
+                <div style="text-align:center">
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                    <span class="dot"></span> 
+                </div>  </div>
+            </div>
+            </div>
+            <div class="block_4">
+                <div class="wrapper_block4">
+                    <div class="image_article_4">
+                        <img src="doctor.png">
+                        <div class="article_block4">
+                            Sed ut perspiciatis unde omnis iste natus
+                            error sit voluptatem accusantium doloremque 
+                            laudantium, totam rem aperiam, eaque ipsa quae 
+                            ab illo inventore veritatis et quasi architecto 
+                            beatae vitae dicta sunt explicabo.
+                        </div>
+                    </div>
+                    <ul>
+                        <li>Sed ut</li>
+                        <li>Totam rem aperiam</li>
+                        <li>Inventore veritatis</li>
+                    </ul>
+                    <button type="button"><a href="#button">Заказать</a></button>
+                </div>
+            </div>
+            <div class="block_5" id="button">
+                <div class="wrapper_block5">
+                    <h1>LevelUp</h1>                 
+                    <div class="timer">
+                        <div class="timer__items">
+                            <div class="timer__item timer__minutes">00</div>
+                            <div class="timer__item timer__seconds">00</div>
+                        </div>        
+                    </div>
+                    <div class="wrapper_form">
+                        <div class="sale">
+                            <img src="prod.png">
+                            <div class="sale_text1">
+                                2000 
+                            </div>
+                            <div class="sale_text2">
+                                1000 
+                            </div>
+                        </div>
+                        <div class="form">
+                            <form action="#" method="post" name="dialog">
+                                <input name="name" type="text"
+                                required placeholder="Your name">
+                                <input name="tel" pattern="[0-9]{11}"
+                                placeholder="89990001112" required
+                                maxlength="11">
+                                <button type="submit">Заказать</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+            
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("slides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                   slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                setTimeout(showSlides, 100000); 
+            }
+/////////
+            document.addEventListener('DOMContentLoaded', function () {
+  
+      const deadline = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(), 
+      new Date().getHours(), new Date().getMinutes() + 30, new Date().getSeconds());
+   
+      let timerId = null;
+      
+      function declensionNum(num, words) {
+        return words[(num % 100 > 4 && num % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(num % 10 < 5) ? num % 10 : 5]];
+      }
+      
+      function countdownTimer() {
+        const diff = deadline - new Date();
+        if (diff <= 0) {
+          clearInterval(timerId);
+        }
+       
+        const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+        const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+        
+        $minutes.textContent = minutes < 10 ? '0' + minutes : minutes;
+        $seconds.textContent = seconds < 10 ? '0' + seconds : seconds;
+        
+        $minutes.dataset.title = declensionNum(minutes, ['минута', 'минуты', 'минут']);
+        $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд']);
+      }
+      const $minutes = document.querySelector('.timer__minutes');
+      const $seconds = document.querySelector('.timer__seconds');
+     
+      countdownTimer();
+     
+      timerId = setInterval(countdownTimer, 1000);
+    });
+        </script>
+    </body>
+</html>    
